@@ -9,11 +9,16 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Kirby Rafael Balagon - Data Analyst Portfolio">
+          content="Kirby Rafael Balagon - Data Analyst, Business Intelligence and Analytics Portfolio">
+
+    <meta name="author"
+          content="Kirby Rafael Balagon">
 
     <title>Kirby Rafael Balagon | Data Analyst</title>
 
-    <!-- Google Fonts -->
+
+    <!-- GOOGLE FONTS -->
+
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
 
@@ -24,11 +29,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
           rel="stylesheet">
 
-    <!-- Font Awesome -->
+
+    <!-- FONT AWESOME -->
+
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <!-- Website CSS -->
+
+    <!-- CSS -->
+
     <link rel="stylesheet"
           href="style.css">
 
@@ -38,18 +47,20 @@
 <body>
 
 
-<!-- =========================
+<!-- ========================================
      NAVIGATION
-========================= -->
+======================================== -->
 
-<header class="navbar">
+<header class="navbar"
+        id="navbar">
 
     <div class="container nav-container">
+
 
         <a href="#home"
            class="logo">
 
-            <span>K</span>rafaelB
+            <span>K</span>RafaelB
 
         </a>
 
@@ -57,25 +68,36 @@
         <nav class="nav-menu"
              id="navMenu">
 
-            <a href="#home">Home</a>
+            <a href="#home">
+                Home
+            </a>
 
-            <a href="#about">About</a>
+            <a href="#about">
+                About
+            </a>
 
-            <a href="#services">Services</a>
+            <a href="#services">
+                Services
+            </a>
 
-            <a href="#portfolio">Portfolio</a>
+            <a href="#portfolio">
+                Portfolio
+            </a>
 
             <a href="#certifications">
                 Certifications
             </a>
 
-            <a href="#contact">Contact</a>
+            <a href="#contact">
+                Contact
+            </a>
 
         </nav>
 
 
         <button class="menu-toggle"
-                id="menuToggle">
+                id="menuToggle"
+                aria-label="Open navigation">
 
             <i class="fa-solid fa-bars"></i>
 
@@ -87,9 +109,9 @@
 
 
 
-<!-- =========================
+<!-- ========================================
      HERO
-========================= -->
+======================================== -->
 
 <section class="hero"
          id="home">
@@ -97,7 +119,10 @@
     <div class="container hero-grid">
 
 
+        <!-- HERO CONTENT -->
+
         <div class="hero-content">
+
 
             <div class="availability">
 
@@ -112,7 +137,9 @@
 
                 KIRBY RAFAEL
 
-                <strong>BALAGON</strong>
+                <strong>
+                    BALAGON
+                </strong>
 
             </h1>
 
@@ -132,13 +159,14 @@
 
                 I transform complex data into
                 meaningful insights using SQL,
-                Python, Power BI, data visualization
-                and intelligent automation.
+                Python, Power BI, data visualization,
+                automation and modern analytics tools.
 
             </p>
 
 
             <div class="hero-buttons">
+
 
                 <a href="#portfolio"
                    class="btn primary">
@@ -160,36 +188,51 @@
 
                 </a>
 
+
             </div>
 
 
+
+            <!-- SOCIAL LINKS -->
+
             <div class="socials">
 
-                <a href="https://github.com/kirby1529"
-                   target="_blank">
+
+                <a href="https://github.com/krafaelb"
+                   target="_blank"
+                   aria-label="GitHub">
 
                     <i class="fa-brands fa-github"></i>
 
                 </a>
 
 
-                <!-- CHANGE THIS TO YOUR LINKEDIN -->
+                <!-- REPLACE WITH YOUR ACTUAL LINKEDIN URL -->
 
                 <a href="https://www.linkedin.com/"
-                   target="_blank">
+                   target="_blank"
+                   aria-label="LinkedIn">
 
-                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
 
                 </a>
 
 
-                <!-- CHANGE THIS EMAIL -->
-
-                <a href="mailto:your-email@example.com">
+                <a href="mailto:kbalagon@alum.up.edu.ph"
+                   aria-label="Email">
 
                     <i class="fa-solid fa-envelope"></i>
 
                 </a>
+
+
+                <a href="tel:+639241121868"
+                   aria-label="Phone">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                </a>
+
 
             </div>
 
@@ -201,7 +244,9 @@
 
         <div class="hero-image">
 
+
             <div class="profile-card">
+
 
                 <div class="profile-photo">
 
@@ -213,13 +258,16 @@
 
                 <div class="profile-info">
 
+
                     <h3>
                         Kirby Rafael Balagon
                     </h3>
 
+
                     <p>
                         Data Analyst
                     </p>
+
 
                     <div class="open-status">
 
@@ -229,9 +277,15 @@
 
                     </div>
 
+
                 </div>
 
+
             </div>
+
+
+
+            <!-- FLOATING SKILLS -->
 
 
             <div class="floating sql">
@@ -260,7 +314,9 @@
 
             </div>
 
+
         </div>
+
 
     </div>
 
@@ -268,18 +324,22 @@
 
 
 
-<!-- =========================
+<!-- ========================================
      ABOUT
-========================= -->
+======================================== -->
 
 <section class="section"
          id="about">
 
     <div class="container">
 
+
         <div class="section-title">
 
-            <span>ABOUT ME</span>
+            <span>
+                ABOUT ME
+            </span>
+
 
             <h2>
 
@@ -294,29 +354,29 @@
         </div>
 
 
+
         <div class="about-grid">
 
 
             <div class="about-text">
 
+
                 <p>
 
                     I am a Data Analyst focused on
-                    transforming raw and complex
-                    datasets into meaningful insights
-                    that support better business
-                    decisions.
+                    transforming raw and complex datasets
+                    into clear, meaningful insights that
+                    support better business decisions.
 
                 </p>
 
 
                 <p>
 
-                    My experience includes SQL,
-                    Python, Power BI, Google Sheets,
-                    data visualization, reporting,
-                    automation and operational
-                    analytics.
+                    My experience includes SQL, Python,
+                    Power BI, Google Sheets, Snowflake,
+                    data visualization, operational
+                    reporting and workflow automation.
 
                 </p>
 
@@ -326,7 +386,9 @@
                     I enjoy solving business problems
                     through data, building dashboards,
                     improving reporting processes and
-                    creating automated solutions.
+                    creating automated solutions that
+                    make information easier to understand
+                    and act upon.
 
                 </p>
 
@@ -340,7 +402,9 @@
 
                 </a>
 
+
             </div>
+
 
 
             <div class="stats">
@@ -350,64 +414,86 @@
 
                     <i class="fa-solid fa-database"></i>
 
-                    <h3>SQL</h3>
+                    <h3>
+                        SQL
+                    </h3>
 
                     <p>
+
                         Data querying,
                         transformation
                         and analysis
+
                     </p>
 
                 </div>
+
 
 
                 <div class="stat">
 
                     <i class="fa-brands fa-python"></i>
 
-                    <h3>Python</h3>
+                    <h3>
+                        Python
+                    </h3>
 
                     <p>
+
                         Data cleaning,
-                        analysis and
+                        analytics and
                         automation
+
                     </p>
 
                 </div>
+
 
 
                 <div class="stat">
 
                     <i class="fa-solid fa-chart-pie"></i>
 
-                    <h3>Power BI</h3>
+                    <h3>
+                        Power BI
+                    </h3>
 
                     <p>
+
                         Dashboards,
                         KPIs and
                         visualization
+
                     </p>
 
                 </div>
+
 
 
                 <div class="stat">
 
                     <i class="fa-solid fa-robot"></i>
 
-                    <h3>AI</h3>
+                    <h3>
+                        AI
+                    </h3>
 
                     <p>
+
                         Intelligent
                         automation and
                         AI applications
+
                     </p>
 
                 </div>
 
+
             </div>
 
+
         </div>
+
 
     </div>
 
@@ -415,9 +501,9 @@
 
 
 
-<!-- =========================
+<!-- ========================================
      SERVICES
-========================= -->
+======================================== -->
 
 <section class="section gray"
          id="services">
@@ -427,31 +513,42 @@
 
         <div class="section-title center">
 
-            <span>WHAT I DO</span>
+            <span>
+                WHAT I DO
+            </span>
+
 
             <h2>
 
                 Analytics & Data
 
-                <strong>Services</strong>
+                <strong>
+                    Services
+                </strong>
 
             </h2>
+
 
             <p>
 
                 I build practical data solutions
-                that transform information into
-                actionable business insights.
+                designed to transform information
+                into clear and actionable business
+                insights.
 
             </p>
 
         </div>
 
 
+
         <div class="services-grid">
 
 
+            <!-- SERVICE 1 -->
+
             <div class="service">
+
 
                 <div class="service-icon">
 
@@ -459,25 +556,34 @@
 
                 </div>
 
+
                 <h3>
                     Data Analysis
                 </h3>
 
+
                 <p>
 
-                    Explore datasets, identify
-                    patterns, investigate trends
-                    and generate actionable
-                    insights.
+                    Explore datasets, identify patterns,
+                    investigate trends and generate
+                    actionable business insights.
 
                 </p>
 
-                <small>01</small>
+
+                <small>
+                    01
+                </small>
+
 
             </div>
 
 
+
+            <!-- SERVICE 2 -->
+
             <div class="service">
+
 
                 <div class="service-icon">
 
@@ -485,24 +591,35 @@
 
                 </div>
 
+
                 <h3>
                     Dashboard Development
                 </h3>
 
+
                 <p>
 
-                    Create interactive dashboards
+                    Build interactive dashboards
                     using Power BI, Google Sheets
-                    and other BI tools.
+                    and modern business intelligence
+                    tools.
 
                 </p>
 
-                <small>02</small>
+
+                <small>
+                    02
+                </small>
+
 
             </div>
 
 
+
+            <!-- SERVICE 3 -->
+
             <div class="service">
+
 
                 <div class="service-icon">
 
@@ -510,9 +627,11 @@
 
                 </div>
 
+
                 <h3>
                     SQL & Data Transformation
                 </h3>
+
 
                 <p>
 
@@ -522,12 +641,20 @@
 
                 </p>
 
-                <small>03</small>
+
+                <small>
+                    03
+                </small>
+
 
             </div>
 
 
+
+            <!-- SERVICE 4 -->
+
             <div class="service">
+
 
                 <div class="service-icon">
 
@@ -535,24 +662,34 @@
 
                 </div>
 
+
                 <h3>
                     Data Automation
                 </h3>
 
+
                 <p>
 
                     Automate repetitive reporting
-                    and data workflows using
-                    Python and Google Apps Script.
+                    and data workflows using Python,
+                    Google Apps Script and AI tools.
 
                 </p>
 
-                <small>04</small>
+
+                <small>
+                    04
+                </small>
+
 
             </div>
 
 
+
+            <!-- SERVICE 5 -->
+
             <div class="service">
+
 
                 <div class="service-icon">
 
@@ -560,24 +697,35 @@
 
                 </div>
 
+
                 <h3>
                     Python Analytics
                 </h3>
+
 
                 <p>
 
                     Use Python and Pandas for
                     data cleaning, exploration,
-                    analysis and visualization.
+                    visualization and statistical
+                    analysis.
 
                 </p>
 
-                <small>05</small>
+
+                <small>
+                    05
+                </small>
+
 
             </div>
 
 
+
+            <!-- SERVICE 6 -->
+
             <div class="service">
+
 
                 <div class="service-icon">
 
@@ -585,9 +733,11 @@
 
                 </div>
 
+
                 <h3>
                     AI & Intelligent Analytics
                 </h3>
+
 
                 <p>
 
@@ -598,12 +748,17 @@
 
                 </p>
 
-                <small>06</small>
+
+                <small>
+                    06
+                </small>
+
 
             </div>
 
 
         </div>
+
 
     </div>
 
@@ -611,9 +766,9 @@
 
 
 
-<!-- =========================
+<!-- ========================================
      PORTFOLIO
-========================= -->
+======================================== -->
 
 <section class="section"
          id="portfolio">
@@ -623,29 +778,41 @@
 
         <div class="section-title">
 
-            <span>MY WORK</span>
+
+            <span>
+                MY WORK
+            </span>
+
 
             <h2>
 
                 Featured
 
-                <strong>Projects</strong>
+                <strong>
+                    Projects
+                </strong>
 
             </h2>
 
+
             <p>
 
-                Practical data analytics and
-                business intelligence projects.
+                A selection of data analytics,
+                dashboard and business intelligence
+                projects focused on solving practical
+                business problems.
 
             </p>
+
 
         </div>
 
 
-        <!-- FILTER -->
+
+        <!-- PORTFOLIO FILTER -->
 
         <div class="filters">
+
 
             <button class="filter active"
                     data-filter="all">
@@ -686,7 +853,9 @@
 
             </button>
 
+
         </div>
+
 
 
         <!-- PROJECTS -->
@@ -694,17 +863,22 @@
         <div class="projects">
 
 
+
             <!-- PROJECT 1 -->
 
             <article class="project"
                      data-category="dashboard bi">
 
+
                 <div class="project-image">
 
+
                     <img src="assets/projects/call-center-dashboard.jpg"
-                         alt="Call Center Dashboard">
+                         alt="Call Center Performance Dashboard">
+
 
                     <div class="project-overlay">
+
 
                         <a href="Google-Sheets-Call-Center-Dashboard/"
                            class="project-button">
@@ -713,18 +887,26 @@
 
                         </a>
 
+
                     </div>
+
 
                 </div>
 
 
+
                 <div class="project-content">
+
 
                     <div class="tags">
 
-                        <span>Google Sheets</span>
+                        <span>
+                            Google Sheets
+                        </span>
 
-                        <span>Dashboard</span>
+                        <span>
+                            Dashboard
+                        </span>
 
                     </div>
 
@@ -756,7 +938,9 @@
 
                     </a>
 
+
                 </div>
+
 
             </article>
 
@@ -767,7 +951,9 @@
             <article class="project"
                      data-category="dashboard bi">
 
+
                 <div class="project-image">
+
 
                     <div class="project-placeholder">
 
@@ -775,16 +961,23 @@
 
                     </div>
 
+
                 </div>
+
 
 
                 <div class="project-content">
 
+
                     <div class="tags">
 
-                        <span>Power BI</span>
+                        <span>
+                            Power BI
+                        </span>
 
-                        <span>DAX</span>
+                        <span>
+                            DAX
+                        </span>
 
                     </div>
 
@@ -806,14 +999,15 @@
                     </p>
 
 
-                    <a href="#contact"
-                       class="project-link">
+                    <span class="coming-soon">
 
                         Coming Soon
 
-                    </a>
+                    </span>
+
 
                 </div>
+
 
             </article>
 
@@ -824,7 +1018,9 @@
             <article class="project"
                      data-category="sql">
 
+
                 <div class="project-image">
+
 
                     <div class="project-placeholder">
 
@@ -832,16 +1028,23 @@
 
                     </div>
 
+
                 </div>
+
 
 
                 <div class="project-content">
 
+
                     <div class="tags">
 
-                        <span>SQL</span>
+                        <span>
+                            SQL
+                        </span>
 
-                        <span>Analytics</span>
+                        <span>
+                            Analytics
+                        </span>
 
                     </div>
 
@@ -855,7 +1058,7 @@
 
                     <p>
 
-                        SQL analysis exploring
+                        SQL-based analysis exploring
                         operational and business
                         performance data to identify
                         actionable insights.
@@ -863,14 +1066,15 @@
                     </p>
 
 
-                    <a href="#contact"
-                       class="project-link">
+                    <span class="coming-soon">
 
                         Coming Soon
 
-                    </a>
+                    </span>
+
 
                 </div>
+
 
             </article>
 
@@ -881,7 +1085,9 @@
             <article class="project"
                      data-category="python">
 
+
                 <div class="project-image">
+
 
                     <div class="project-placeholder">
 
@@ -889,16 +1095,23 @@
 
                     </div>
 
+
                 </div>
+
 
 
                 <div class="project-content">
 
+
                     <div class="tags">
 
-                        <span>Python</span>
+                        <span>
+                            Python
+                        </span>
 
-                        <span>Pandas</span>
+                        <span>
+                            Pandas
+                        </span>
 
                     </div>
 
@@ -920,14 +1133,15 @@
                     </p>
 
 
-                    <a href="#contact"
-                       class="project-link">
+                    <span class="coming-soon">
 
                         Coming Soon
 
-                    </a>
+                    </span>
+
 
                 </div>
+
 
             </article>
 
@@ -935,9 +1149,11 @@
         </div>
 
 
+
         <div class="github-button">
 
-            <a href="https://github.com/kirby1529"
+
+            <a href="https://github.com/krafaelb"
                target="_blank"
                class="btn primary">
 
@@ -947,7 +1163,9 @@
 
             </a>
 
+
         </div>
+
 
     </div>
 
@@ -955,9 +1173,9 @@
 
 
 
-<!-- =========================
+<!-- ========================================
      CERTIFICATIONS
-========================= -->
+======================================== -->
 
 <section class="section gray"
          id="certifications">
@@ -967,23 +1185,33 @@
 
         <div class="section-title center">
 
-            <span>CREDENTIALS</span>
+
+            <span>
+                CREDENTIALS
+            </span>
+
 
             <h2>
 
                 Certifications &
 
-                <strong>Learning</strong>
+                <strong>
+                    Learning
+                </strong>
 
             </h2>
 
+
         </div>
+
 
 
         <div class="certifications">
 
 
+
             <div class="certificate">
+
 
                 <div class="certificate-icon">
 
@@ -991,9 +1219,14 @@
 
                 </div>
 
+
                 <div>
 
-                    <span>DATA ANALYTICS</span>
+
+                    <span>
+                        DATA ANALYTICS
+                    </span>
+
 
                     <h3>
 
@@ -1001,6 +1234,7 @@
                         Certifications
 
                     </h3>
+
 
                     <p>
 
@@ -1011,12 +1245,16 @@
 
                     </p>
 
+
                 </div>
+
 
             </div>
 
 
+
             <div class="certificate">
+
 
                 <div class="certificate-icon">
 
@@ -1024,9 +1262,16 @@
 
                 </div>
 
+
                 <div>
 
-                    <span>ARTIFICIAL INTELLIGENCE</span>
+
+                    <span>
+
+                        ARTIFICIAL INTELLIGENCE
+
+                    </span>
+
 
                     <h3>
 
@@ -1034,21 +1279,26 @@
 
                     </h3>
 
+
                     <p>
 
                         Learning focused on
                         generative AI, AI agents,
                         prompt engineering and
-                        Python.
+                        Python-based applications.
 
                     </p>
 
+
                 </div>
+
 
             </div>
 
 
+
             <div class="certificate">
+
 
                 <div class="certificate-icon">
 
@@ -1056,9 +1306,14 @@
 
                 </div>
 
+
                 <div>
 
-                    <span>CLOUD TECHNOLOGY</span>
+
+                    <span>
+                        CLOUD TECHNOLOGY
+                    </span>
+
 
                     <h3>
 
@@ -1066,20 +1321,25 @@
 
                     </h3>
 
+
                     <p>
 
-                        Developing knowledge of
-                        cloud platforms and modern
-                        data technologies.
+                        Developing knowledge in
+                        cloud platforms, modern
+                        analytics and data
+                        technologies.
 
                     </p>
 
+
                 </div>
+
 
             </div>
 
 
         </div>
+
 
     </div>
 
@@ -1087,28 +1347,37 @@
 
 
 
-<!-- =========================
+<!-- ========================================
      TOOLS
-========================= -->
+======================================== -->
 
-<section class="section">
+<section class="section"
+         id="tools">
 
     <div class="container">
 
 
         <div class="section-title center">
 
-            <span>TECHNOLOGY STACK</span>
+
+            <span>
+                TECHNOLOGY STACK
+            </span>
+
 
             <h2>
 
                 Tools I
 
-                <strong>Use</strong>
+                <strong>
+                    Use
+                </strong>
 
             </h2>
 
+
         </div>
+
 
 
         <div class="tools">
@@ -1118,7 +1387,9 @@
 
                 <i class="fa-solid fa-database"></i>
 
-                <span>SQL</span>
+                <span>
+                    SQL
+                </span>
 
             </div>
 
@@ -1127,7 +1398,9 @@
 
                 <i class="fa-brands fa-python"></i>
 
-                <span>Python</span>
+                <span>
+                    Python
+                </span>
 
             </div>
 
@@ -1136,7 +1409,9 @@
 
                 <i class="fa-solid fa-chart-column"></i>
 
-                <span>Power BI</span>
+                <span>
+                    Power BI
+                </span>
 
             </div>
 
@@ -1145,7 +1420,9 @@
 
                 <i class="fa-solid fa-table"></i>
 
-                <span>Excel</span>
+                <span>
+                    Excel
+                </span>
 
             </div>
 
@@ -1154,7 +1431,9 @@
 
                 <i class="fa-solid fa-file-lines"></i>
 
-                <span>Google Sheets</span>
+                <span>
+                    Google Sheets
+                </span>
 
             </div>
 
@@ -1163,7 +1442,9 @@
 
                 <i class="fa-solid fa-database"></i>
 
-                <span>Snowflake</span>
+                <span>
+                    Snowflake
+                </span>
 
             </div>
 
@@ -1172,7 +1453,9 @@
 
                 <i class="fa-solid fa-code"></i>
 
-                <span>Pandas</span>
+                <span>
+                    Pandas
+                </span>
 
             </div>
 
@@ -1181,11 +1464,15 @@
 
                 <i class="fa-solid fa-robot"></i>
 
-                <span>Generative AI</span>
+                <span>
+                    Generative AI
+                </span>
 
             </div>
 
+
         </div>
+
 
     </div>
 
@@ -1193,9 +1480,9 @@
 
 
 
-<!-- =========================
+<!-- ========================================
      CONTACT
-========================= -->
+======================================== -->
 
 <section class="contact"
          id="contact">
@@ -1206,45 +1493,130 @@
         <div class="contact-box">
 
 
-            <div>
+            <div class="contact-main">
 
-                <span>LET'S CONNECT</span>
+
+                <span class="contact-label">
+
+                    LET'S CONNECT
+
+                </span>
+
 
                 <h2>
 
-                    Have a Data
+                    Let's Work
 
-                    <strong>Problem?</strong>
+                    <strong>
+                        Together.
+                    </strong>
 
                 </h2>
 
 
-                <p>
+                <p class="contact-intro">
 
-                    Let's turn your data into
-                    something useful,
-                    understandable and actionable.
+                    Have a project, opportunity or question?
+                    Feel free to contact me directly.
 
                 </p>
+
+
+
+                <div class="contact-details">
+
+
+
+                    <!-- EMAIL -->
+
+                    <a href="mailto:kbalagon@alum.up.edu.ph"
+                       class="contact-item">
+
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <small>
+                                EMAIL
+                            </small>
+
+                            <strong>
+                                kbalagon@alum.up.edu.ph
+                            </strong>
+
+                        </div>
+
+
+                    </a>
+
+
+
+                    <!-- PHONE -->
+
+                    <a href="tel:+639241121868"
+                       class="contact-item">
+
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <small>
+                                PHONE
+                            </small>
+
+                            <strong>
+                                0924 112 1868
+                            </strong>
+
+                        </div>
+
+
+                    </a>
+
+
+                </div>
+
 
             </div>
 
 
+
             <div class="contact-buttons">
 
-                <!-- CHANGE EMAIL -->
 
-                <a href="mailto:your-email@example.com"
+                <a href="mailto:kbalagon@alum.up.edu.ph"
                    class="btn white">
 
-                    Get In Touch
+                    Send Email
 
-                    <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-paper-plane"></i>
 
                 </a>
 
 
-                <a href="https://github.com/kirby1529"
+                <a href="tel:+639241121868"
+                   class="btn transparent">
+
+                    Call Me
+
+                    <i class="fa-solid fa-phone"></i>
+
+                </a>
+
+
+                <a href="https://github.com/krafaelb"
                    target="_blank"
                    class="btn transparent">
 
@@ -1254,9 +1626,12 @@
 
                 </a>
 
+
             </div>
 
+
         </div>
+
 
     </div>
 
@@ -1264,21 +1639,24 @@
 
 
 
-<!-- =========================
+<!-- ========================================
      FOOTER
-========================= -->
+======================================== -->
 
 <footer>
+
 
     <div class="container footer">
 
 
         <div>
 
+
             <a href="#home"
                class="footer-logo">
 
                 <span>K</span>IRBY.
+                <strong>BALAGON</strong>
 
             </a>
 
@@ -1291,41 +1669,72 @@
 
             </p>
 
+
         </div>
+
 
 
         <div class="footer-links">
 
-            <a href="#home">Home</a>
 
-            <a href="#about">About</a>
+            <a href="#home">
+                Home
+            </a>
 
-            <a href="#portfolio">Portfolio</a>
 
-            <a href="#contact">Contact</a>
+            <a href="#about">
+                About
+            </a>
+
+
+            <a href="#portfolio">
+                Portfolio
+            </a>
+
+
+            <a href="#contact">
+                Contact
+            </a>
+
 
         </div>
 
 
+
         <div class="footer-social">
 
-            <a href="https://github.com/kirby1529"
-               target="_blank">
+
+            <a href="https://github.com/krafaelb"
+               target="_blank"
+               aria-label="GitHub">
 
                 <i class="fa-brands fa-github"></i>
 
             </a>
 
-            <a href="https://www.linkedin.com/"
-               target="_blank">
 
-                <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/"
+               target="_blank"
+               aria-label="LinkedIn">
+
+                <i class="fa-brands fa-linkedin-in"></i>
 
             </a>
 
+
+            <a href="mailto:kbalagon@alum.up.edu.ph"
+               aria-label="Email">
+
+                <i class="fa-solid fa-envelope"></i>
+
+            </a>
+
+
         </div>
 
+
     </div>
+
 
 
     <div class="copyright">
@@ -1336,11 +1745,12 @@
 
     </div>
 
+
 </footer>
 
 
 
-<!-- JavaScript -->
+<!-- JAVASCRIPT -->
 
 <script src="script.js"></script>
 
