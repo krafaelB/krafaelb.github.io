@@ -1,6 +1,6 @@
-/* =========================
-   MOBILE MENU
-========================= */
+/* ==========================================
+   MOBILE NAVIGATION
+========================================== */
 
 const menuToggle =
     document.getElementById("menuToggle");
@@ -21,15 +21,16 @@ menuToggle.addEventListener(
 );
 
 
-/* Close menu after clicking */
+
+/* CLOSE MENU AFTER CLICK */
 
 document
     .querySelectorAll(".nav-menu a")
-    .forEach(function(link) {
+    .forEach(function (link) {
 
         link.addEventListener(
             "click",
-            function() {
+            function () {
 
                 navMenu.classList.remove(
                     "active"
@@ -42,14 +43,46 @@ document
 
 
 
-/* =========================
+/* ==========================================
+   NAVBAR SCROLL EFFECT
+========================================== */
+
+const navbar =
+    document.getElementById("navbar");
+
+
+window.addEventListener(
+    "scroll",
+    function () {
+
+        if (window.scrollY > 30) {
+
+            navbar.classList.add(
+                "scrolled"
+            );
+
+        } else {
+
+            navbar.classList.remove(
+                "scrolled"
+            );
+
+        }
+
+    }
+);
+
+
+
+/* ==========================================
    PORTFOLIO FILTER
-========================= */
+========================================== */
 
 const filters =
     document.querySelectorAll(
         ".filter"
     );
+
 
 const projects =
     document.querySelectorAll(
@@ -57,91 +90,95 @@ const projects =
     );
 
 
-filters.forEach(function(button) {
+filters.forEach(
+    function (button) {
 
-    button.addEventListener(
-        "click",
-        function() {
-
-
-            /* Remove active */
-
-            filters.forEach(
-                function(btn) {
-
-                    btn.classList.remove(
-                        "active"
-                    );
-
-                }
-            );
+        button.addEventListener(
+            "click",
+            function () {
 
 
-            /* Activate clicked button */
+                filters.forEach(
+                    function (btn) {
 
-            button.classList.add(
-                "active"
-            );
-
-
-            const selected =
-                button.dataset.filter;
-
-
-            projects.forEach(
-                function(project) {
-
-
-                    const categories =
-                        project
-                        .dataset
-                        .category
-                        .split(" ");
-
-
-                    if (
-                        selected === "all" ||
-                        categories.includes(
-                            selected
-                        )
-                    ) {
-
-                        project.classList.remove(
-                            "hide"
-                        );
-
-                    } else {
-
-                        project.classList.add(
-                            "hide"
+                        btn.classList.remove(
+                            "active"
                         );
 
                     }
-
-                }
-            );
-
-        }
-    );
-
-});
+                );
 
 
-
-/* =========================
-   CURRENT YEAR
-========================= */
-
-document.getElementById(
-    "year"
-).textContent =
-    new Date().getFullYear();
+                button.classList.add(
+                    "active"
+                );
 
 
+                const selected =
+                    button.dataset.filter;
 
-/* =========================
+
+                projects.forEach(
+                    function (project) {
+
+
+                        const categories =
+                            project
+                                .dataset
+                                .category
+                                .split(" ");
+
+
+                        if (
+                            selected === "all" ||
+                            categories.includes(
+                                selected
+                            )
+                        ) {
+
+                            project.classList.remove(
+                                "hide"
+                            );
+
+                        } else {
+
+                            project.classList.add(
+                                "hide"
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    }
+);
+
+
+
+/* ==========================================
+   AUTOMATIC CURRENT YEAR
+========================================== */
+
+const year =
+    document.getElementById("year");
+
+
+if (year) {
+
+    year.textContent =
+        new Date().getFullYear();
+
+}
+
+
+
+/* ==========================================
    SCROLL REVEAL
-========================= */
+========================================== */
 
 const revealItems =
     document.querySelectorAll(
@@ -155,10 +192,11 @@ const revealItems =
 
 const observer =
     new IntersectionObserver(
-        function(entries) {
+
+        function (entries) {
 
             entries.forEach(
-                function(entry) {
+                function (entry) {
 
                     if (
                         entry.isIntersecting
@@ -180,16 +218,19 @@ const observer =
             );
 
         },
+
         {
             threshold: 0.1
         }
+
     );
 
 
 revealItems.forEach(
-    function(element) {
+    function (element) {
 
-        element.style.opacity = "0";
+        element.style.opacity =
+            "0";
 
         element.style.transform =
             "translateY(25px)";
@@ -197,7 +238,9 @@ revealItems.forEach(
         element.style.transition =
             "opacity .6s ease, transform .6s ease";
 
-        observer.observe(element);
+        observer.observe(
+            element
+        );
 
     }
 );
