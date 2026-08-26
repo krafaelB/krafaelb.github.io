@@ -1,246 +1,1878 @@
-/* ==========================================
-   MOBILE NAVIGATION
-========================================== */
+<!DOCTYPE html>
+<html lang="en">
 
-const menuToggle =
-    document.getElementById("menuToggle");
+<head>
 
-const navMenu =
-    document.getElementById("navMenu");
+    <meta charset="UTF-8">
 
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-menuToggle.addEventListener(
-    "click",
-    function () {
+    <meta name="description"
+          content="Kirby Rafael Balagon - Data Analyst, Business Intelligence and Analytics Portfolio">
 
-        navMenu.classList.toggle(
-            "active"
-        );
+    <meta name="author"
+          content="Kirby Rafael Balagon">
 
-    }
-);
+    <title>Kirby Rafael Balagon | Data Analyst</title>
 
 
+    <!-- GOOGLE FONTS -->
 
-/* CLOSE MENU AFTER CLICK */
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-document
-    .querySelectorAll(".nav-menu a")
-    .forEach(function (link) {
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-        link.addEventListener(
-            "click",
-            function () {
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
 
-                navMenu.classList.remove(
-                    "active"
-                );
 
-            }
-        );
+    <!-- FONT AWESOME -->
 
-    });
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 
+    <!-- CSS -->
 
-/* ==========================================
-   NAVBAR SCROLL EFFECT
-========================================== */
+    <link rel="stylesheet"
+          href="style.css">
 
-const navbar =
-    document.getElementById("navbar");
+</head>
 
 
-window.addEventListener(
-    "scroll",
-    function () {
+<body>
 
-        if (window.scrollY > 30) {
 
-            navbar.classList.add(
-                "scrolled"
-            );
 
-        } else {
+<!-- ========================================
+     NAVIGATION
+======================================== -->
 
-            navbar.classList.remove(
-                "scrolled"
-            );
+<header class="navbar"
+        id="navbar">
 
-        }
+    <div class="container nav-container">
 
-    }
-);
 
+        <a href="#home"
+           class="logo">
 
+            <span>K</span>RafaelB
 
-/* ==========================================
-   PORTFOLIO FILTER
-========================================== */
+        </a>
 
-const filters =
-    document.querySelectorAll(
-        ".filter"
-    );
 
+        <nav class="nav-menu"
+             id="navMenu">
 
-const projects =
-    document.querySelectorAll(
-        ".project"
-    );
+            <a href="#home">
+                Home
+            </a>
 
+            <a href="#about">
+                About
+            </a>
 
-filters.forEach(
-    function (button) {
+            <a href="#services">
+                Services
+            </a>
 
-        button.addEventListener(
-            "click",
-            function () {
+            <a href="#portfolio">
+                Portfolio
+            </a>
 
+            <a href="#certifications">
+                Certifications
+            </a>
 
-                filters.forEach(
-                    function (btn) {
+            <a href="#contact">
+                Contact
+            </a>
 
-                        btn.classList.remove(
-                            "active"
-                        );
+        </nav>
 
-                    }
-                );
 
+        <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation">
 
-                button.classList.add(
-                    "active"
-                );
+            <i class="fa-solid fa-bars"></i>
 
+        </button>
 
-                const selected =
-                    button.dataset.filter;
+    </div>
 
+</header>
 
-                projects.forEach(
-                    function (project) {
 
 
-                        const categories =
-                            project
-                                .dataset
-                                .category
-                                .split(" ");
+<!-- ========================================
+     HERO
+======================================== -->
 
+<section class="hero"
+         id="home">
 
-                        if (
-                            selected === "all" ||
-                            categories.includes(
-                                selected
-                            )
-                        ) {
+    <div class="container hero-grid">
 
-                            project.classList.remove(
-                                "hide"
-                            );
 
-                        } else {
+        <!-- LEFT SIDE -->
 
-                            project.classList.add(
-                                "hide"
-                            );
+        <div class="hero-content">
 
-                        }
 
-                    }
-                );
+            <div class="availability">
 
-            }
-        );
+                <span></span>
 
-    }
-);
+                AVAILABLE FOR OPPORTUNITIES
 
+            </div>
 
 
-/* ==========================================
-   AUTOMATIC CURRENT YEAR
-========================================== */
+            <h1>
 
-const year =
-    document.getElementById("year");
+                KIRBY RAFAEL
 
+                <strong>
+                    BALAGON
+                </strong>
 
-if (year) {
+            </h1>
 
-    year.textContent =
-        new Date().getFullYear();
 
-}
+            <h2>
 
+                Data Analyst
 
+                <b>|</b>
 
-/* ==========================================
-   SCROLL REVEAL
-========================================== */
+                Business Intelligence
 
-const revealItems =
-    document.querySelectorAll(
-        ".service, " +
-        ".project, " +
-        ".stat, " +
-        ".certificate, " +
-        ".tool"
-    );
+            </h2>
 
 
-const observer =
-    new IntersectionObserver(
+            <p>
 
-        function (entries) {
+                I transform complex data into meaningful
+                insights using SQL, Python, Power BI,
+                data visualization, automation and
+                modern analytics tools.
 
-            entries.forEach(
-                function (entry) {
+            </p>
 
-                    if (
-                        entry.isIntersecting
-                    ) {
 
-                        entry.target.style.opacity =
-                            "1";
+            <div class="hero-buttons">
 
-                        entry.target.style.transform =
-                            "translateY(0)";
 
-                        observer.unobserve(
-                            entry.target
-                        );
+                <a href="#portfolio"
+                   class="btn primary">
 
-                    }
+                    View My Work
 
-                }
-            );
+                    <i class="fa-solid fa-arrow-right"></i>
 
-        },
+                </a>
 
-        {
-            threshold: 0.1
-        }
 
-    );
+                <a href="assets/resume.pdf"
+                   target="_blank"
+                   class="btn outline">
 
+                    Download Resume
 
-revealItems.forEach(
-    function (element) {
+                    <i class="fa-solid fa-download"></i>
 
-        element.style.opacity =
-            "0";
+                </a>
 
-        element.style.transform =
-            "translateY(25px)";
 
-        element.style.transition =
-            "opacity .6s ease, transform .6s ease";
+            </div>
 
-        observer.observe(
-            element
-        );
 
-    }
-);
+
+            <!-- SOCIAL LINKS -->
+
+            <div class="socials">
+
+
+                <a href="https://github.com/krafaelb"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="GitHub">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+
+                <a href="https://www.linkedin.com/in/rafaelbalagon/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="LinkedIn">
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                </a>
+
+
+                <a href="mailto:kbalagon@alum.up.edu.ph"
+                   aria-label="Email">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </a>
+
+
+                <a href="tel:+639241121868"
+                   aria-label="Phone">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- RIGHT SIDE - PROFILE -->
+
+        <div class="hero-image">
+
+
+            <div class="profile-card">
+
+
+                <div class="profile-photo">
+
+                    <img src="assets/profile.jpg"
+                         alt="Kirby Rafael Balagon">
+
+                </div>
+
+
+                <div class="profile-info">
+
+
+                    <h3>
+                        Kirby Rafael Balagon
+                    </h3>
+
+
+                    <p>
+                        Data Analyst
+                    </p>
+
+
+                    <div class="open-status">
+
+                        <span></span>
+
+                        Open to Work
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     ABOUT
+======================================== -->
+
+<section class="section"
+         id="about">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+
+            <span>
+                ABOUT ME
+            </span>
+
+
+            <h2>
+
+                Turning Data Into
+
+                <strong>
+                    Business Intelligence
+                </strong>
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="about-grid">
+
+
+            <div class="about-text">
+
+
+                <p>
+
+                    I am a Data Analyst focused on
+                    transforming raw and complex datasets
+                    into clear, meaningful insights that
+                    support better business decisions.
+
+                </p>
+
+
+                <p>
+
+                    My experience includes SQL, Python,
+                    Power BI, Google Sheets, Snowflake,
+                    data visualization, operational
+                    reporting and workflow automation.
+
+                </p>
+
+
+                <p>
+
+                    I enjoy solving business problems
+                    through data, building dashboards,
+                    improving reporting processes and
+                    creating automated solutions that
+                    make information easier to understand
+                    and act upon.
+
+                </p>
+
+
+                <a href="#contact"
+                   class="text-link">
+
+                    Let's Work Together
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+            </div>
+
+
+
+            <div class="stats">
+
+
+                <div class="stat">
+
+                    <i class="fa-solid fa-database"></i>
+
+                    <h3>
+                        SQL
+                    </h3>
+
+                    <p>
+                        Data querying, transformation
+                        and analysis
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat">
+
+                    <i class="fa-brands fa-python"></i>
+
+                    <h3>
+                        Python
+                    </h3>
+
+                    <p>
+                        Data cleaning, analytics
+                        and automation
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat">
+
+                    <i class="fa-solid fa-chart-pie"></i>
+
+                    <h3>
+                        Power BI
+                    </h3>
+
+                    <p>
+                        Dashboards, KPIs
+                        and visualization
+                    </p>
+
+                </div>
+
+
+
+                <div class="stat">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                    <h3>
+                        AI
+                    </h3>
+
+                    <p>
+                        Intelligent automation
+                        and AI applications
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     SERVICES
+======================================== -->
+
+<section class="section gray"
+         id="services">
+
+    <div class="container">
+
+
+        <div class="section-title center">
+
+
+            <span>
+                WHAT I DO
+            </span>
+
+
+            <h2>
+
+                Analytics & Data
+
+                <strong>
+                    Services
+                </strong>
+
+            </h2>
+
+
+            <p>
+
+                I build practical data solutions
+                designed to transform information
+                into clear and actionable business
+                insights.
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="services-grid">
+
+
+
+            <!-- SERVICE 1 -->
+
+            <div class="service">
+
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+
+
+                <h3>
+                    Data Analysis
+                </h3>
+
+
+                <p>
+
+                    Explore datasets, identify patterns,
+                    investigate trends and generate
+                    actionable business insights.
+
+                </p>
+
+
+                <small>
+                    01
+                </small>
+
+
+            </div>
+
+
+
+            <!-- SERVICE 2 -->
+
+            <div class="service">
+
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                </div>
+
+
+                <h3>
+                    Dashboard Development
+                </h3>
+
+
+                <p>
+
+                    Build interactive dashboards using
+                    Power BI, Google Sheets and modern
+                    business intelligence tools.
+
+                </p>
+
+
+                <small>
+                    02
+                </small>
+
+
+            </div>
+
+
+
+            <!-- SERVICE 3 -->
+
+            <div class="service">
+
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-database"></i>
+
+                </div>
+
+
+                <h3>
+                    SQL & Data Transformation
+                </h3>
+
+
+                <p>
+
+                    Extract, clean, transform and
+                    analyze structured data using SQL.
+
+                </p>
+
+
+                <small>
+                    03
+                </small>
+
+
+            </div>
+
+
+
+            <!-- SERVICE 4 -->
+
+            <div class="service">
+
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-gears"></i>
+
+                </div>
+
+
+                <h3>
+                    Data Automation
+                </h3>
+
+
+                <p>
+
+                    Automate repetitive reporting
+                    and data workflows using Python,
+                    Google Apps Script and AI tools.
+
+                </p>
+
+
+                <small>
+                    04
+                </small>
+
+
+            </div>
+
+
+
+            <!-- SERVICE 5 -->
+
+            <div class="service">
+
+
+                <div class="service-icon">
+
+                    <i class="fa-brands fa-python"></i>
+
+                </div>
+
+
+                <h3>
+                    Python Analytics
+                </h3>
+
+
+                <p>
+
+                    Use Python and Pandas for
+                    data cleaning, exploration,
+                    visualization and statistical
+                    analysis.
+
+                </p>
+
+
+                <small>
+                    05
+                </small>
+
+
+            </div>
+
+
+
+            <!-- SERVICE 6 -->
+
+            <div class="service">
+
+
+                <div class="service-icon">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                </div>
+
+
+                <h3>
+                    AI & Intelligent Analytics
+                </h3>
+
+
+                <p>
+
+                    Explore generative AI,
+                    AI agents and intelligent
+                    automation for modern
+                    analytics workflows.
+
+                </p>
+
+
+                <small>
+                    06
+                </small>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     PORTFOLIO
+======================================== -->
+
+<section class="section"
+         id="portfolio">
+
+    <div class="container">
+
+
+        <div class="section-title">
+
+
+            <span>
+                MY WORK
+            </span>
+
+
+            <h2>
+
+                Featured
+
+                <strong>
+                    Projects
+                </strong>
+
+            </h2>
+
+
+            <p>
+
+                A selection of data analytics,
+                dashboard and business intelligence
+                projects focused on solving practical
+                business problems.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="filters">
+
+
+            <button class="filter active"
+                    data-filter="all">
+
+                All
+
+            </button>
+
+
+            <button class="filter"
+                    data-filter="dashboard">
+
+                Dashboards
+
+            </button>
+
+
+            <button class="filter"
+                    data-filter="sql">
+
+                SQL
+
+            </button>
+
+
+            <button class="filter"
+                    data-filter="python">
+
+                Python
+
+            </button>
+
+
+            <button class="filter"
+                    data-filter="bi">
+
+                Business Intelligence
+
+            </button>
+
+
+        </div>
+
+
+
+        <!-- PROJECTS -->
+
+        <div class="projects">
+
+
+
+            <!-- PROJECT 1 -->
+
+            <article class="project"
+                     data-category="dashboard bi">
+
+
+                <div class="project-image">
+
+
+                    <img src="assets/projects/call-center-dashboard.jpg"
+                         alt="Call Center Performance Dashboard">
+
+
+                    <div class="project-overlay">
+
+
+                        <a href="Google-Sheets-Call-Center-Dashboard/"
+                           class="project-button">
+
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="project-content">
+
+
+                    <div class="tags">
+
+                        <span>
+                            Google Sheets
+                        </span>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Call Center Performance Dashboard
+                    </h3>
+
+
+                    <p>
+
+                        Operational dashboard designed
+                        to monitor call volume, agent
+                        performance, service levels
+                        and customer service metrics.
+
+                    </p>
+
+
+                    <a href="Google-Sheets-Call-Center-Dashboard/"
+                       class="project-link">
+
+                        View Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- PROJECT 2 -->
+
+            <article class="project"
+                     data-category="dashboard bi">
+
+
+                <div class="project-image">
+
+
+                    <div class="project-placeholder">
+
+                        <i class="fa-solid fa-chart-pie"></i>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="project-content">
+
+
+                    <div class="tags">
+
+                        <span>
+                            Power BI
+                        </span>
+
+                        <span>
+                            DAX
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Business Intelligence Dashboard
+                    </h3>
+
+
+                    <p>
+
+                        Interactive KPI dashboard designed
+                        to transform business data into
+                        clear performance insights.
+
+                    </p>
+
+
+                    <span class="coming-soon">
+                        Coming Soon
+                    </span>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- PROJECT 3 -->
+
+            <article class="project"
+                     data-category="sql">
+
+
+                <div class="project-image">
+
+
+                    <div class="project-placeholder">
+
+                        <i class="fa-solid fa-database"></i>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="project-content">
+
+
+                    <div class="tags">
+
+                        <span>
+                            SQL
+                        </span>
+
+                        <span>
+                            Analytics
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        SQL Business Analytics
+                    </h3>
+
+
+                    <p>
+
+                        SQL-based analysis exploring
+                        operational and business
+                        performance data to identify
+                        actionable insights.
+
+                    </p>
+
+
+                    <span class="coming-soon">
+                        Coming Soon
+                    </span>
+
+
+                </div>
+
+
+            </article>
+
+
+
+            <!-- PROJECT 4 -->
+
+            <article class="project"
+                     data-category="python">
+
+
+                <div class="project-image">
+
+
+                    <div class="project-placeholder">
+
+                        <i class="fa-brands fa-python"></i>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="project-content">
+
+
+                    <div class="tags">
+
+                        <span>
+                            Python
+                        </span>
+
+                        <span>
+                            Pandas
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+                        Python Data Analysis
+                    </h3>
+
+
+                    <p>
+
+                        Data cleaning, exploratory
+                        analysis, visualization and
+                        statistical analysis using
+                        Python and Pandas.
+
+                    </p>
+
+
+                    <span class="coming-soon">
+                        Coming Soon
+                    </span>
+
+
+                </div>
+
+
+            </article>
+
+
+        </div>
+
+
+
+        <div class="github-button">
+
+
+            <a href="https://github.com/krafaelb"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn primary">
+
+                View My GitHub
+
+                <i class="fa-brands fa-github"></i>
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     CERTIFICATIONS
+======================================== -->
+
+<section class="section gray"
+         id="certifications">
+
+    <div class="container">
+
+
+        <div class="section-title center">
+
+
+            <span>
+                CREDENTIALS
+            </span>
+
+
+            <h2>
+
+                Certifications &
+
+                <strong>
+                    Learning
+                </strong>
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="certifications">
+
+
+
+            <!-- =================================
+                 DATA TOOLS
+            ================================== -->
+
+            <div class="certificate certification-list-card">
+
+
+                <div class="certificate-icon">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                </div>
+
+
+                <div class="certificate-content">
+
+
+                    <span>
+                        DATA TOOLS
+                    </span>
+
+
+                    <h3>
+                        Data Analytics & BI
+                    </h3>
+
+
+
+                    <div class="credential-list">
+
+
+
+                        <!-- SQL -->
+
+                        <div class="credential-item">
+
+
+                            <div class="credential-check">
+
+                                <i class="fa-solid fa-check"></i>
+
+                            </div>
+
+
+                            <div>
+
+
+                                <h4>
+
+                                    The Complete SQL Bootcamp 2022:
+                                    Go From Zero to Hero
+
+                                </h4>
+
+
+                                <p>
+                                    Udemy
+                                </p>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- POWER BI -->
+
+                        <div class="credential-item">
+
+
+                            <div class="credential-check">
+
+                                <i class="fa-solid fa-check"></i>
+
+                            </div>
+
+
+                            <div>
+
+
+                                <h4>
+
+                                    Microsoft Power BI Desktop
+                                    for Business Intelligence
+
+                                </h4>
+
+
+                                <p>
+                                    Udemy
+                                </p>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- EXCEL -->
+
+                        <div class="credential-item">
+
+
+                            <div class="credential-check">
+
+                                <i class="fa-solid fa-check"></i>
+
+                            </div>
+
+
+                            <div>
+
+
+                                <h4>
+
+                                    Microsoft Excel -
+                                    Excel from Beginner to Advanced
+
+                                </h4>
+
+
+                                <p>
+                                    Udemy
+                                </p>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- PYTHON -->
+
+                        <div class="credential-item">
+
+
+                            <div class="credential-check">
+
+                                <i class="fa-solid fa-check"></i>
+
+                            </div>
+
+
+                            <div>
+
+
+                                <h4>
+                                    Introduction to Python
+                                </h4>
+
+
+                                <p>
+                                    DataCamp
+                                </p>
+
+
+                                <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/f648f77cc01345b8475104819c318247edf7c086"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="credential-link">
+
+                                    View Credential
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 AI & AGENTIC AI
+            ================================== -->
+
+            <div class="certificate certification-list-card">
+
+
+                <div class="certificate-icon">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                </div>
+
+
+                <div class="certificate-content">
+
+
+                    <span>
+                        AI & AGENTIC AI
+                    </span>
+
+
+                    <h3>
+                        Artificial Intelligence
+                    </h3>
+
+
+
+                    <div class="credential-list">
+
+
+
+                        <div class="credential-item">
+
+
+                            <div class="credential-check">
+
+                                <i class="fa-solid fa-check"></i>
+
+                            </div>
+
+
+                            <div>
+
+
+                                <h4>
+
+                                    AI Agents and Agentic AI in Python:
+                                    Powered by Generative AI
+
+                                </h4>
+
+
+                                <p>
+
+                                    Vanderbilt University
+                                    <br>
+                                    Coursera
+
+                                </p>
+
+
+                                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/IN7M3DLB18J3"
+                                   target="_blank"
+                                   rel="noopener noreferrer"
+                                   class="credential-link">
+
+                                    View Credential
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                                </a>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     TOOLS
+======================================== -->
+
+<section class="section"
+         id="tools">
+
+    <div class="container">
+
+
+        <div class="section-title center">
+
+
+            <span>
+                TECHNOLOGY STACK
+            </span>
+
+
+            <h2>
+
+                Tools I
+
+                <strong>
+                    Use
+                </strong>
+
+            </h2>
+
+
+        </div>
+
+
+
+        <div class="tools">
+
+
+
+            <div class="tool">
+
+                <i class="fa-solid fa-database"></i>
+
+                <span>
+                    SQL
+                </span>
+
+            </div>
+
+
+
+            <div class="tool">
+
+                <i class="fa-brands fa-python"></i>
+
+                <span>
+                    Python
+                </span>
+
+            </div>
+
+
+
+            <div class="tool">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <span>
+                    Power BI
+                </span>
+
+            </div>
+
+
+
+            <div class="tool">
+
+                <i class="fa-solid fa-table"></i>
+
+                <span>
+                    Excel
+                </span>
+
+            </div>
+
+
+
+            <div class="tool">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <span>
+                    Google Sheets
+                </span>
+
+            </div>
+
+
+
+            <div class="tool">
+
+                <i class="fa-solid fa-database"></i>
+
+                <span>
+                    Snowflake
+                </span>
+
+            </div>
+
+
+
+            <div class="tool">
+
+                <i class="fa-solid fa-code"></i>
+
+                <span>
+                    Pandas
+                </span>
+
+            </div>
+
+
+
+            <div class="tool">
+
+                <i class="fa-solid fa-robot"></i>
+
+                <span>
+                    Generative AI
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     CONTACT
+======================================== -->
+
+<section class="contact"
+         id="contact">
+
+    <div class="container">
+
+
+        <div class="contact-box">
+
+
+            <div class="contact-main">
+
+
+                <span class="contact-label">
+                    LET'S CONNECT
+                </span>
+
+
+                <h2>
+
+                    Let's Work
+
+                    <strong>
+                        Together.
+                    </strong>
+
+                </h2>
+
+
+                <p class="contact-intro">
+
+                    Have a project, opportunity or question?
+                    Feel free to contact me directly.
+
+                </p>
+
+
+
+                <div class="contact-details">
+
+
+
+                    <!-- EMAIL -->
+
+                    <a href="mailto:kbalagon@alum.up.edu.ph"
+                       class="contact-item">
+
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+
+                        <div>
+
+
+                            <small>
+                                EMAIL
+                            </small>
+
+
+                            <strong>
+                                kbalagon@alum.up.edu.ph
+                            </strong>
+
+
+                        </div>
+
+
+                    </a>
+
+
+
+                    <!-- PHONE -->
+
+                    <a href="tel:+639241121868"
+                       class="contact-item">
+
+
+                        <div class="contact-icon">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                        </div>
+
+
+                        <div>
+
+
+                            <small>
+                                PHONE
+                            </small>
+
+
+                            <strong>
+                                0924 112 1868
+                            </strong>
+
+
+                        </div>
+
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="contact-buttons">
+
+
+
+                <a href="mailto:kbalagon@alum.up.edu.ph"
+                   class="btn white">
+
+                    Send Email
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </a>
+
+
+
+                <a href="tel:+639241121868"
+                   class="btn transparent">
+
+                    Call Me
+
+                    <i class="fa-solid fa-phone"></i>
+
+                </a>
+
+
+
+                <a href="https://github.com/krafaelb"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="btn transparent">
+
+                    GitHub
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ========================================
+     FOOTER
+======================================== -->
+
+<footer>
+
+
+    <div class="container footer">
+
+
+        <div>
+
+
+            <a href="#home"
+               class="footer-logo">
+
+                <span>K</span>RafaelB
+
+            </a>
+
+
+            <p>
+
+                Data Analyst |
+                Business Intelligence |
+                Analytics & Automation
+
+            </p>
+
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+
+            <a href="#home">
+                Home
+            </a>
+
+
+            <a href="#about">
+                About
+            </a>
+
+
+            <a href="#portfolio">
+                Portfolio
+            </a>
+
+
+            <a href="#contact">
+                Contact
+            </a>
+
+
+        </div>
+
+
+
+        <div class="footer-social">
+
+
+
+            <a href="https://github.com/krafaelb"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="GitHub">
+
+                <i class="fa-brands fa-github"></i>
+
+            </a>
+
+
+
+            <a href="https://www.linkedin.com/in/rafaelbalagon/"
+               target="_blank"
+               rel="noopener noreferrer"
+               aria-label="LinkedIn">
+
+                <i class="fa-brands fa-linkedin-in"></i>
+
+            </a>
+
+
+
+            <a href="mailto:kbalagon@alum.up.edu.ph"
+               aria-label="Email">
+
+                <i class="fa-solid fa-envelope"></i>
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="copyright">
+
+        © <span id="year"></span>
+        Kirby Rafael Balagon.
+        All Rights Reserved.
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
