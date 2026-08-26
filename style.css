@@ -602,7 +602,7 @@ img {
         0 30px 80px
         rgba(15, 23, 42, 0.15);
 
-    transform: rotate(3deg);
+    transform: none;
 
 }
 
