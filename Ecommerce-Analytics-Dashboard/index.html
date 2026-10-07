@@ -1,1 +1,15 @@
+dashboard_file = "ecommerce_analytics_dashboard.html"
 
+with open(
+    dashboard_file,
+    "w",
+    encoding="utf-8"
+) as f:
+    f.write(html)
+
+
+import os
+
+print("Dashboard created successfully!")
+print("Location:")
+print(os.path.abspath(dashboard_file))
